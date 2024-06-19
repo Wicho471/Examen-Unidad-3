@@ -178,7 +178,7 @@ function init() {
 
          // Crea una caja de colisión para la pirámide
          const pyramidBox = new THREE.Box3().setFromObject(pyramid);
-         pyramidBox.expandByScalar(-pyramidSize * 0.01); // Reducir el tamaño de la caja de colisión
+         pyramidBox.expandByScalar(-pyramidSize * 0.1); // Reducir el tamaño de la caja de colisión
          pyramidBoxes.push(pyramidBox);
     }
 }
@@ -308,7 +308,7 @@ function animate() {
 
         // Actualiza la caja de colisión del personaje
         characterBox = new THREE.Box3().setFromObject(characterGroup);
-        characterBox.expandByScalar(-100); // Reducir el tamaño de la caja de colisión del personaje
+        characterBox.expandByScalar(-60); // Reducir el tamaño de la caja de colisión del personaje
 
         // Verifica colisiones con las pirámides
         for (const pyramidBox of pyramidBoxes) {
